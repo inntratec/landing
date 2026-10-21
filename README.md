@@ -63,3 +63,7 @@ Activar **Enforce HTTPS** en Settings → Pages.
 
 - Reemplazar `public/logo.png` e `icon.png` (recortes de la portada de LinkedIn) por el logo vectorial/transparente original.
 - Regenerar `og.png` si cambia el titular o la marca.
+
+## Licencia
+
+© 2026 INntratec SAS. Todos los derechos reservados. Código y marca de uso exclusivo; ver [LICENSE](LICENSE).
