@@ -1,20 +1,21 @@
 ---
 import type { Dict } from '../i18n/es';
-import { EMAIL, LINKEDIN } from '../i18n/site';
+import { EMAIL, LINKEDIN, PHONE_TEL, PHONE_DISPLAY, WHATSAPP } from '../i18n/site';
 interface Props { t: Dict }
 const { t } = Astro.props;
 const year = new Date().getFullYear();
+const other = t.lang === 'es' ? 'en' : 'es';
 ---
 <a class="skip" href="#main">{t.skip}</a>
 <header class="top">
   <a class="brand" href={t.lang === 'es' ? '/' : '/en/'} aria-label="INntratec"><img src="/logo.png" alt="INntratec — Innovación en tus manos" width="172" height="47" /></a>
   <nav aria-label="Principal">
+    <a href="#about">{t.nav.about}</a>
     <a href="#what">{t.nav.what}</a>
-    <a href="#areas">{t.nav.areas}</a>
-    <a href="#who">{t.nav.who}</a>
+    <a href="#team">{t.nav.team}</a>
     <a href="#partners">{t.nav.partners}</a>
     <a href="#contact">{t.nav.contact}</a>
-    <a class="lang" href={t.switchHref} hreflang={t.lang === 'es' ? 'en' : 'es'}>{t.switchLabel}</a>
+    <a class="lang" href={t.switchHref} hreflang={other}>{t.switchLabel}</a>
   </nav>
 </header>
 
@@ -27,6 +28,16 @@ const year = new Date().getFullYear();
     <div class="actions">
       <a class="btn primary" href={`mailto:${EMAIL}`}>{t.hero.cta}</a>
       <a class="btn" href={LINKEDIN} rel="noopener" target="_blank">{t.hero.secondary}</a>
+    </div>
+  </section>
+
+  <section id="about" class="block">
+    <h2>{t.about.title}</h2>
+    <div class="about">
+      <div>{t.about.paras.map((p) => <p class="lead-p">{p}</p>)}</div>
+      <dl class="facts">
+        {t.about.facts.map((f) => (<div><dt>{f.k}</dt><dd>{f.v}</dd></div>))}
+      </dl>
     </div>
   </section>
 
@@ -51,6 +62,23 @@ const year = new Date().getFullYear();
     </div>
   </section>
 
+  <section id="team" class="block">
+    <h2>{t.team.title}</h2>
+    <p class="muted team-lead">{t.team.lead}</p>
+    <div class="team">
+      {t.team.members.map((m) => (
+        <article class="member">
+          <div class="avatar" aria-hidden="true">{m.initials}</div>
+          <h3>{m.name}</h3>
+          <p class="role">{m.role}</p>
+          <p class="bio">{m.bio}</p>
+          <ul>{m.points.map((p) => <li>{p}</li>)}</ul>
+          <a class="inlink" href={m.linkedin} rel="noopener" target="_blank">{t.team.linkedin} →</a>
+        </article>
+      ))}
+    </div>
+  </section>
+
   <section id="partners" class="block">
     <h2>{t.partners.title}</h2>
     <p class="muted">{t.partners.lead}</p>
@@ -71,13 +99,14 @@ const year = new Date().getFullYear();
     <p class="lead">{t.contact.lead}</p>
     <div class="actions">
       <a class="btn primary" href={`mailto:${EMAIL}`}>{t.contact.email}</a>
+      <a class="btn" href={WHATSAPP} rel="noopener" target="_blank">{t.contact.whatsapp}</a>
       <a class="btn" href={LINKEDIN} rel="noopener" target="_blank">{t.contact.linkedin}</a>
     </div>
-    <p class="muted">{EMAIL} · {t.contact.where}</p>
+    <p class="muted">{EMAIL} · <a href={`tel:${PHONE_TEL}`}>{PHONE_DISPLAY}</a> · {t.contact.where}</p>
   </section>
 </main>
 
 <footer class="foot">
   <span>{t.footer.replace('{year}', String(year))}</span>
-  <a href={t.switchHref} hreflang={t.lang === 'es' ? 'en' : 'es'}>{t.switchLabel}</a>
+  <a href={t.switchHref} hreflang={other}>{t.switchLabel}</a>
 </footer>

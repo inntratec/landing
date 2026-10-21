@@ -2,7 +2,7 @@
 import '@fontsource-variable/montserrat';
 import '../styles/global.css';
 import type { Dict } from '../i18n/es';
-import { EMAIL, LINKEDIN } from '../i18n/site';
+import { EMAIL, LINKEDIN, PHONE_TEL } from '../i18n/site';
 
 interface Props { t: Dict; path: string }
 const { t, path } = Astro.props;
@@ -14,6 +14,7 @@ const ld = {
   name: 'INntratec SAS',
   url: origin,
   email: EMAIL,
+  telephone: PHONE_TEL,
   logo: origin + '/logo.png',
   slogan: t.lang === 'es' ? 'Innovación en tus manos' : 'Innovation in your hands',
   foundingDate: '2021',
