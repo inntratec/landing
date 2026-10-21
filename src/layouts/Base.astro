@@ -1,0 +1,48 @@
+---
+import '@fontsource-variable/fraunces';
+import '@fontsource-variable/inter';
+import '../styles/global.css';
+import type { Dict } from '../i18n/es';
+import { EMAIL, LINKEDIN } from '../i18n/site';
+
+interface Props { t: Dict; path: string }
+const { t, path } = Astro.props;
+const origin = 'https://inntratec.com';
+const url = origin + path;
+const ld = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'INntratec SAS',
+  url: origin,
+  email: EMAIL,
+  foundingDate: '2021',
+  sameAs: [LINKEDIN],
+  address: { '@type': 'PostalAddress', addressLocality: 'Cuenca', addressRegion: 'Azuay', addressCountry: 'EC' },
+  description: t.description,
+};
+---
+<!doctype html>
+<html lang={t.lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{t.title}</title>
+    <meta name="description" content={t.description} />
+    <meta name="theme-color" content="#0e1a17" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href={url} />
+    <link rel="alternate" hreflang="es" href={origin + '/'} />
+    <link rel="alternate" hreflang="en" href={origin + '/en/'} />
+    <link rel="alternate" hreflang="x-default" href={origin + '/'} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={t.title} />
+    <meta property="og:description" content={t.description} />
+    <meta property="og:url" content={url} />
+    <meta property="og:locale" content={t.lang === 'es' ? 'es_EC' : 'en_US'} />
+    <meta name="twitter:card" content="summary" />
+    <script type="application/ld+json" set:html={JSON.stringify(ld)} />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
