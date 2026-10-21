@@ -57,6 +57,7 @@ export const es = {
       {
         name: 'Andrea Morales Rodríguez',
         initials: 'AM',
+        photo: '/team/andrea.jpg',
         role: 'Gestión de proyectos y planificación estratégica',
         bio: 'Ingeniera en Sistemas y Magíster en Gestión Estratégica de las Tecnologías de la Información. Cursa la maestría en Sistemas de Información con mención en Data Science en la Pontificia Universidad Católica del Ecuador.',
         points: [
@@ -69,6 +70,7 @@ export const es = {
       {
         name: 'Villie Morocho Zurita',
         initials: 'VM',
+        photo: '/team/villie.jpg',
         role: 'Investigación, datos espaciales y telemedicina',
         bio: 'Doctor por la Universidad Politécnica de Cataluña, especialista en Infraestructuras de Datos Espaciales (IDE), con Diploma de Estudios Avanzados en Lenguajes y Sistemas de Computación de la misma universidad.',
         points: [

@@ -58,6 +58,7 @@ export const en: Dict = {
       {
         name: 'Andrea Morales Rodríguez',
         initials: 'AM',
+        photo: '/team/andrea.jpg',
         role: 'Project management and strategic planning',
         bio: 'Systems Engineer with a Master’s in Strategic Management of Information Technology. Currently pursuing a Master’s in Information Systems with a Data Science focus at Pontificia Universidad Católica del Ecuador.',
         points: [
@@ -70,6 +71,7 @@ export const en: Dict = {
       {
         name: 'Villie Morocho Zurita',
         initials: 'VM',
+        photo: '/team/villie.jpg',
         role: 'Research, spatial data and telemedicine',
         bio: 'PhD from Universitat Politècnica de Catalunya, specialist in Spatial Data Infrastructures (SDI), with an Advanced Studies Diploma in Languages and Computer Systems from the same university.',
         points: [

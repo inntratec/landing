@@ -107,3 +107,4 @@ h3 { font-size: 1.2rem; margin-bottom: .5rem; }
 .inlink { margin-top: auto; color: var(--teal); font-weight: 600; text-decoration: none; font-size: .92rem; }
 .inlink:hover { text-decoration: underline; text-underline-offset: 4px; }
 .contact .muted a { text-decoration: underline; text-underline-offset: 3px; }
+.avatar.photo { width: 88px; height: 88px; object-fit: cover; border: 2px solid var(--teal); background: var(--navy); }

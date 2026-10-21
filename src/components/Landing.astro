@@ -68,7 +68,7 @@ const other = t.lang === 'es' ? 'en' : 'es';
     <div class="team">
       {t.team.members.map((m) => (
         <article class="member">
-          <div class="avatar" aria-hidden="true">{m.initials}</div>
+          <img class="avatar photo" src={m.photo} alt={m.name} width="88" height="88" loading="lazy" />
           <h3>{m.name}</h3>
           <p class="role">{m.role}</p>
           <p class="bio">{m.bio}</p>
