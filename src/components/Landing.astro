@@ -7,7 +7,7 @@ const year = new Date().getFullYear();
 ---
 <a class="skip" href="#main">{t.skip}</a>
 <header class="top">
-  <a class="brand" href={t.lang === 'es' ? '/' : '/en/'} aria-label="INntratec">IN<span>ntratec</span></a>
+  <a class="brand" href={t.lang === 'es' ? '/' : '/en/'} aria-label="INntratec"><img src="/logo.png" alt="INntratec — Innovación en tus manos" width="172" height="47" /></a>
   <nav aria-label="Principal">
     <a href="#what">{t.nav.what}</a>
     <a href="#areas">{t.nav.areas}</a>
@@ -20,6 +20,7 @@ const year = new Date().getFullYear();
 
 <main id="main">
   <section class="hero">
+    <p class="slogan">{t.slogan}</p>
     <p class="eyebrow">{t.hero.eyebrow}</p>
     <h1>{t.hero.title}</h1>
     <p class="lead">{t.hero.lead}</p>
@@ -38,7 +39,7 @@ const year = new Date().getFullYear();
     </ol>
   </section>
 
-  <section id="areas" class="block band">
+  <section id="areas" class="block">
     <h2>{t.areas.title}</h2>
     <ul class="chips">{t.areas.items.map((a) => <li>{a}</li>)}</ul>
   </section>
@@ -50,7 +51,7 @@ const year = new Date().getFullYear();
     </div>
   </section>
 
-  <section id="partners" class="block band">
+  <section id="partners" class="block">
     <h2>{t.partners.title}</h2>
     <p class="muted">{t.partners.lead}</p>
     <ul class="list">{t.partners.items.map((p) => <li>{p}</li>)}</ul>

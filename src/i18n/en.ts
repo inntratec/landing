@@ -5,6 +5,7 @@ export const en: Dict = {
   title: 'INntratec — Research, innovation and technology transfer',
   description:
     'High-technology company in Cuenca, Ecuador, delivering research, development, innovation and technology transfer projects with universities, companies and research institutes.',
+  slogan: 'Innovation in your hands',
   skip: 'Skip to content',
   nav: { what: 'What we do', areas: 'Areas', who: 'Who we serve', partners: 'Partners', contact: 'Contact' },
   hero: {

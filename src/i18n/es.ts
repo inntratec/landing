@@ -3,6 +3,7 @@ export const es = {
   title: 'INntratec — Investigación, innovación y transferencia tecnológica',
   description:
     'Empresa de alta tecnología en Cuenca, Ecuador, para proyectos de investigación, desarrollo, innovación y transferencia tecnológica con universidades, empresas e institutos de investigación.',
+  slogan: 'Innovación en tus manos',
   skip: 'Saltar al contenido',
   nav: { what: 'Qué hacemos', areas: 'Áreas', who: 'Para quién', partners: 'Alianzas', contact: 'Contacto' },
   hero: {
